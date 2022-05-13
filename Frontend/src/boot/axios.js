@@ -11,7 +11,7 @@ import axios from 'axios'
 // for each client)
 // const token = 'Bearer' + ' ' + localStorage.token
 // axios.defaults.headers.common.Authorization = token
-const api = axios.create({ baseURL: 'http://127.0.0.1:8000' })
+const api = axios.create({ baseURL: 'https://infraperfil.up.railway.app/' })
 
 export default boot(({ app }) => {
     // for use inside Vue files (Options API) through this.$axios and this.$api
