@@ -45,7 +45,7 @@ module.exports = configure(function(ctx) {
         // Full list of options: https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
         build: {
             vueRouterMode: 'hash', // available values: 'hash', 'history'
-
+            distDir: ctx.mode.spa ? 'public' : null,
             // transpile: false,
 
             // Add dependencies for transpiling with Babel (Array of string/regex)
@@ -107,7 +107,7 @@ module.exports = configure(function(ctx) {
             // manualStoreHydration: true,
             // manualPostHydrationTrigger: true,
 
-            prodPort: 3000, // The default port that the production server should use
+            prodPort: process.env.PORT, // The default port that the production server should use
             // (gets superseded if process.env.PORT is specified at runtime)
 
             maxAge: 1000 * 60 * 60 * 24 * 30,
